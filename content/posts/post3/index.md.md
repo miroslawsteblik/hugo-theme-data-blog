@@ -1,11 +1,10 @@
 ---
 author : "Miroslaw Steblik"  
-date: 2025-03-09T10:58:08-04:00
-title: "Go idioms"
-description: "First encounter with Go"
+date: 2025-04-09T10:58:08-04:00
+description: "Contenerization"
+title: "Write once, run everywhere"
 featured_image: "/images/banner_pipeline.jpeg"
-card_image: "/images/github_logo_icon_large2.png" 
-tags: ["go"]
+tags: ["docker"]
 show_reading_time: true
 draft : false
 ---

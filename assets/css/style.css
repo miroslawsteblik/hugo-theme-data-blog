@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    STYLE.CSS - COMPONENT-BASED ORGANIZATION
    ========================================================================== */
@@ -91,13 +90,60 @@ html, body {
 
 body {
   color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-family-primary);
+  line-height: var(--line-height-base);
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
+/* ==========================================================================
+   3. BASE TYPOGRAPHY & ELEMENTS
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--font-size-xxl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-md);
+}
+
+blockquote {
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-md);
+  border-left: 4px solid var(--color-primary);
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+/* ==========================================================================
+   4. LAYOUT COMPONENTS
+   ========================================================================== */
 
 /* Banner and Header */
 .banner-container {
@@ -261,7 +307,10 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Main Content */
+/* ==========================================================================
+   5. UI COMPONENTS
+   ========================================================================== */
+
 main {
   max-width: 1400px;
   margin: 0 auto;
@@ -270,13 +319,12 @@ main {
   flex: 1 0 auto;
 }
 
-/* Override main padding for specific page types */
 main:has(.blog-container),
 main:has(.post),
 main:has(.about-page-container),
 main:has(.post-page-container),
 main:has(.blog-page-container) {
-  padding: 0 3rem 5rem; /* Use consistent padding for all page types */
+  padding: 0 3rem 5rem; 
 }
 
 /* Footer */
@@ -309,6 +357,27 @@ footer {
   flex-direction: column;
 }
 
+
+
+.read-more-btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 500;
+  margin-top: auto; /* Push to bottom */
+  align-self: flex-start;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.read-more-btn:hover {
+  background-color: #003d99;
+  transform: translateY(-2px);
+}
+
 /* Position headshot to align with expertise tiles specifically */
 .profile-content > h2 {
   margin-bottom: 1rem;
@@ -319,37 +388,6 @@ footer {
 
 .profile-content > p:first-of-type {
   margin-bottom: 2rem;
-}
-
-/* Expertise section layout - with photo alignment */
-.expertise-section {
-  margin-top: 2rem;
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
-}
-
-.expertise-categories {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: relative;
-}
-
-/* Profile image positioned alongside expertise tiles */
-.profile-image {
-  flex: 0 0 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 2rem; /* Moved to top of expertise tiles */
-}
-
-.profile-image > .profile-photo,
-.profile-image > .profile-caption {
-  margin-bottom: 1.5rem;
 }
 
 /* Profile card in left column */
@@ -386,32 +424,6 @@ footer {
 
 .profile-photo:hover {
   transform: scale(1.05);
-}
-
-/* Profile caption styling */
-.profile-caption {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Left-align text */
-  height: 100%;
-  padding: 0;
-}
-
-.profile-caption p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-color);
-  margin: 0;
-}
-
-.profile-caption p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--text-color);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-align: left;
 }
 
 /* Expertise tags */
@@ -470,6 +482,10 @@ footer {
   display: none;
 }
 
+/* ==========================================================================
+   6. PAGE-SPECIFIC COMPONENTS
+   ========================================================================== */
+
 /* Blog page */
 .blog-list {
   display: grid;
@@ -514,18 +530,35 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.read-more {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+/* Expertise section layout - with photo alignment */
+.expertise-section {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
 }
 
-.read-more:hover {
-  background-color: #003d99;
+.expertise-categories {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+/* Profile image positioned alongside expertise tiles */
+.profile-image {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem; /* Moved to top of expertise tiles */
+}
+
+.profile-image > .profile-photo,
+.profile-image > .profile-caption {
+  margin-bottom: 1.5rem;
 }
 
 /* About page */
@@ -762,6 +795,354 @@ footer {
   color: white;
 }
 
+/* ==========================================================================
+   7. UTILITY CLASSES
+   ========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+   8. MEDIA QUERIES & RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Mobile First: Extra Small screens (up to 479px) */
+@media screen and (max-width: 47.99em) {
+  .profile-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .expertise-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .profile-image {
+    flex: none;
+    order: -1; /* Show image at top on mobile */
+    align-self: center;
+    margin-top: 0; /* Remove offset on mobile */
+  }
+  
+  .profile-photo {
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+/* Small screens: Mobile (up to 768px) */
+@media screen and (max-width: 768px) {
+  /* Layout adjustments */
+  .header-content {
+    padding: 1rem;
+  }
+  
+  .header-top {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .header-top-right {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .site-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  /* Navigation */
+  .main-navigation nav ul {
+    flex-direction: row;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .main-navigation nav a {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    min-width: 60px;
+  }
+  
+  /* Main content padding */
+  main:has(.blog-container),
+  main:has(.post),
+  main:has(.about-page-container),
+  main:has(.post-page-container),
+  main:has(.blog-page-container) {
+    padding: 0 1rem 3rem; /* Reduce horizontal padding from 3rem to 1rem */
+  }
+  
+  /* Profile components */
+  .profile-container {
+    flex-direction: column;
+  }
+  
+  .profile-card {
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+    text-align: center;
+    max-width: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .profile-caption {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Post content responsiveness */
+  .post {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  
+  .post-content {
+    max-width: 100%;
+  }
+  
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .post-featured-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .post-navigation {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .post-nav-card.next {
+    text-align: left;
+  }
+  
+  /* Blog components - mobile layout */
+  .blog-list-improved {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  
+  .blog-item-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .blog-item-image {
+    flex: 0 0 200px;
+    order: -1;
+  }
+  
+  .blog-item-content {
+    order: 1;
+  }
+  
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Social icons - smaller on mobile */
+  .social-icon-link {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .social-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  
+  .header-social, .footer-social {
+    gap: 1rem;
+  }
+}
+
+/* Medium screens: Tablets (769px to 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .main-navigation nav ul {
+    gap: 0.75rem;
+  }
+  
+  .main-navigation nav a {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    min-width: 70px;
+  }
+  
+  .header-top-right {
+    gap: 1.5rem;
+  }
+}
+
+/* Large screens: Desktop (768px and up) */
+@media (min-width: 768px) {
+  .blog-list-improved {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1400px;
+  }
+  
+  .blog-item-card {
+    flex-direction: row;
+    height: 250px;
+  }
+  
+  .blog-item-image {
+    flex: 0 0 280px;
+    order: 0;
+  }
+  
+  .blog-item-content {
+    order: 0;
+  }
+}
+
+/* Medium desktop screens (768px and up) */
+@media screen and (min-width: 48em) {
+  .profile-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .profile-content {
+    flex: 2;
+  }
+  
+  .expertise-section {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+  
+  .expertise-categories {
+    flex: 1;
+  }
+  
+  .profile-image {
+    flex: 0 0 320px;
+    margin-top: 8rem; /* Adjust offset for medium screens */
+  }
+  
+  .profile-photo {
+    max-width: 320px;
+  }
+}
+
+/* Large desktop screens (1024px and up) */
+@media screen and (min-width: 64em) {
+  .profile-image {
+    flex: 0 0 350px;
+    margin-top: 10rem; /* Maintain larger offset for large screens */
+  }
+  
+  .profile-photo {
+    max-width: 350px;
+  }
+  
+  .profile-content {
+    flex: 2.5;
+  }
+  
+  .center {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Extra large screens: Wide desktop (1400px and up) */
+@media (min-width: 1400px) {
+  .blog-list-improved {
+    max-width: 1000px;
+  }
+}
+
+/* Dark mode preferences */
+@media (prefers-color-scheme: dark) {
+  .tag {
+    background-color: #3182ce;
+  }
+  
+  .tag:hover {
+    background-color: #4299e1;
+  }
+}
+
+/* Legacy utility classes - consider removing if not used */
+.center {
+  max-width: 1400px !important;
+}
+
+.w-two-thirds-l {
+  width: 100% !important;
+}
+
+.pa4 {
+  padding: 1.5rem !important;
+}
+
+/* ==========================================================================
+   9. PROFILE CAPTION STYLING
+   ========================================================================== */
+
+/* Profile caption styling */
+.profile-caption {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Left-align text */
+  height: 100%;
+  padding: 0;
+}
+
+.profile-caption p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.profile-caption p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #003d99;
+}
+
+
 /* Full-width profile content without two-column layout */
 .profile-content-full {
   width: 100%;
@@ -781,39 +1162,39 @@ footer {
   margin: 0 auto 3rem auto; /* Center the card and add more bottom margin */
 }
 
-/* Responsive design for profile card */
-@media screen and (max-width: 768px) {
-  .profile-card {
-    grid-template-columns: 1fr; /* Stack vertically on mobile */
-    text-align: center;
-    max-width: 100%;
-    padding: 1.5rem;
-    gap: 1.5rem;
-  }
-  
-  .profile-photo {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-  
-  .profile-caption {
-    justify-content: center;
-    text-align: center;
-  }
+/* About page highlight styles */
+.company-highlight {
+  font-weight: 600;
+  color: var(--primary-color, #2563eb);
+  background: rgba(37, 99, 235, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  transition: all 0.2s ease;
 }
 
-/* Responsive navigation */
-@media screen and (max-width: 768px) {
-  .post-navigation {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .post-nav-card.next {
-    text-align: left;
-  }
+.company-highlight:hover {
+  background: rgba(37, 99, 235, 0.15);
+  transform: translateY(-1px);
 }
+
+.tech-highlight {
+  font-weight: 600;
+  color: var(--secondary-color, #059669);
+  background: rgba(5, 150, 105, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  transition: all 0.2s ease;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.tech-highlight:hover {
+  background: rgba(5, 150, 105, 0.15);
+  transform: translateY(-1px);
+}
+
+
 
 /* Blog page - Improved List View */
 .blog-page-title {
@@ -825,9 +1206,11 @@ footer {
 
 .blog-list-improved {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin: 2rem 0;
+  max-width: 1400px;
+  align-items: start;
 }
 
 .blog-item-card {
@@ -836,31 +1219,29 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
-  margin-bottom: 1.5rem;
-  height: 250px; /* Fixed height for consistency */
   display: flex;
   flex-direction: row;
+  height: 250px;
+  align-items: stretch;
 }
 
 .blog-item-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .blog-item-content {
-  padding: 1.5rem;
-  flex: 3;
+  padding: 2rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribute space evenly */
-  overflow: hidden;
+  justify-content: center;
 }
 
 .blog-item-image {
-  flex: 2;
-  background-color: #f6f6f6;
+  flex: 0 0 280px;
+  position: relative;
   overflow: hidden;
-  min-width: 250px;
 }
 
 .blog-item-image img {
@@ -868,22 +1249,21 @@ footer {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.5s;
-}
-
-.blog-item-card:hover .blog-item-image img {
-  transform: scale(1.05);
+  max-width: none;
+  display: block;
 }
 
 .blog-title {
-  margin: 0 0 0.75rem 0;
-  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  max-height: 3.6em;
+  overflow: hidden;
 }
 
 .blog-title a {
   color: var(--text-color);
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 .blog-title a:hover {
@@ -905,15 +1285,13 @@ footer {
   text-decoration: none;
   transition: all 0.3s;
   font-weight: 500;
-  margin-top: auto; /* Push to bottom */
   align-self: flex-start;
-  flex-shrink: 0; /* Prevent button from shrinking */
+  margin-top: 1rem;
 }
 
-.read-more-btn:hover {
-  background-color: #003d99;
-  transform: translateY(-2px);
-}
+/* ## ==========================================================================
+   10. PAGINATION STYLES
+   ========================================================================== */
 
 /* Pagination styles */
 .pagination {
@@ -985,128 +1363,9 @@ footer {
   color: var(--text-color);
 }
 
-/* Force the blog cards to have equal height */
-/* Responsive adjustments for the blog grid */
-@media (min-width: 768px) {
-  .blog-list-improved {
-    grid-template-columns: repeat(1, 1fr); /* Single column for better image display */
-  }
-}
 
-@media (min-width: 1400px) {
-  .blog-list-improved {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on very wide screens */
-  }
-}
 
-/* Tablet responsive adjustments */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .main-navigation nav ul {
-    gap: 0.75rem;
-  }
-  
-  .main-navigation nav a {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
-    min-width: 70px;
-  }
-  
-  .header-top-right {
-    gap: 1.5rem;
-  }
-}
 
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .header-content {
-    padding: 1rem;
-  }
-  
-  .header-top {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
-  
-  .header-top-right {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    align-items: center;
-  }
-  
-  .site-title {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  
-  .main-navigation nav ul {
-    flex-direction: row;
-    gap: 0.75rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .main-navigation nav a {
-    padding: 0.6rem 1rem;
-    font-size: 0.8rem;
-    min-width: 60px;
-  }
-  
-  .profile-container {
-    flex-direction: column;
-  }
-  
-  .footer-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .blog-item-card {
-    flex-direction: column;
-  }
-  
-  .blog-item-image {
-    height: 200px;
-    order: -1; /* Move image to top on mobile */
-  }
-  
-  /* Smaller social icons on mobile */
-  .social-icon-link {
-    width: 3rem;
-    height: 3rem;
-  }
-  
-  .social-icon {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-  
-  .header-social, .footer-social {
-    gap: 1rem;
-  }
-}
-
-/* Increase content width */
-.center {
-  max-width: 1400px !important; /* Increase from default to match main content */
-}
-
-.w-two-thirds-l {
-  width: 100% !important; /* Make content area wider on large screens */
-}
-
-.pa4 {
-  padding: 1.5rem !important; /* Adjust padding if needed */
-}
-
-/* For mobile responsiveness */
-@media screen and (max-width: 60em) {
-  .center {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
 
 /* Social link styling for profile section */
 .social-link {
@@ -1125,16 +1384,7 @@ footer {
   transform: translateY(-2px);
 }
 
-/* For dark mode compatibility */
-@media (prefers-color-scheme: dark) {
-  .tag {
-    background-color: #3182ce;
-  }
-  
-  .tag:hover {
-    background-color: #4299e1;
-  }
-}
+
 
 /* Footer styles */
 footer {
@@ -1157,76 +1407,27 @@ footer .social-icon-link:hover {
 
 /* Footer additional styles */
 
-/* Responsive layout for larger screens */
-@media screen and (min-width: 48em) {
-  .profile-container {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+
   
-  .profile-content {
-    flex: 2;
-  }
-  
-  .expertise-section {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
-  }
-  
-  .expertise-categories {
-    flex: 1;
-  }
-  
-  .profile-image {
-    flex: 0 0 320px;
-    margin-top: 8rem; /* Adjust offset for medium screens */
-  }
-  
-  .profile-photo {
-    max-width: 320px;
-  }
+.expertise-section {
+  flex-direction: column;
+  gap: 2rem;
 }
 
-@media screen and (min-width: 64em) {
-  .profile-image {
-    flex: 0 0 350px;
-    margin-top: 10rem; /* Maintain larger offset for large screens */
-  }
-  
-  .profile-photo {
-    max-width: 350px;
-  }
-  
-  .profile-content {
-    flex: 2.5;
-  }
+.profile-image {
+  flex: none;
+  order: -1; /* Show image at top on mobile */
+  align-self: center;
+  margin-top: 0; /* Remove offset on mobile */
 }
 
-/* Mobile responsive - stack vertically */
-@media screen and (max-width: 47.99em) {
-  .profile-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .expertise-section {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .profile-image {
-    flex: none;
-    order: -1; /* Show image at top on mobile */
-    align-self: center;
-    margin-top: 0; /* Remove offset on mobile */
-  }
-  
-  .profile-photo {
-    max-width: 300px;
-    height: auto;
-  }
+.profile-photo {
+  max-width: 300px;
+  height: auto;
 }
+/* ==========================================================================
+   4. PAGE CONTAINERS
+   ========================================================================== */
 
 /* Post page container - match about page styling */
 .post-page-container {
@@ -1292,34 +1493,114 @@ footer .social-icon-link:hover {
   font-size: 0.9rem;
 }
 
-/* About page highlight styles */
-.company-highlight {
-  font-weight: 600;
-  color: var(--primary-color, #2563eb);
-  background: rgba(37, 99, 235, 0.1);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  border: 1px solid rgba(37, 99, 235, 0.2);
-  transition: all 0.2s ease;
+/* ==========================================================================
+   BLOG LIST IMPROVED STYLES
+   ========================================================================== */
+
+/* Force blog cards to display properly */
+.blog-list-improved {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem !important;
+  margin: 2rem 0 !important;
+  max-width: 1400px !important;
+  align-items: start !important;
 }
 
-.company-highlight:hover {
-  background: rgba(37, 99, 235, 0.15);
-  transform: translateY(-1px);
+.blog-item-card {
+  background-color: white !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: row !important;
+  height: 250px !important;
+  align-items: stretch !important;
 }
 
-.tech-highlight {
-  font-weight: 600;
-  color: var(--secondary-color, #059669);
-  background: rgba(5, 150, 105, 0.1);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  border: 1px solid rgba(5, 150, 105, 0.2);
-  transition: all 0.2s ease;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+.blog-item-content {
+  padding: 2rem !important;
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
 }
 
-.tech-highlight:hover {
-  background: rgba(5, 150, 105, 0.15);
-  transform: translateY(-1px);
+.blog-item-image {
+  flex: 0 0 280px !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
+
+.blog-item-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  max-width: none !important;
+  display: block !important;
+}
+
+.blog-title {
+  margin: 0 0 1rem 0 !important;
+  font-size: 1.3rem !important;
+  line-height: 1.2 !important;
+  display: block !important;
+  visibility: visible !important;
+  max-height: 3.6em !important;
+  overflow: hidden !important;
+}
+
+.blog-date {
+  color: #666 !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 1rem !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.read-more-btn {
+  display: inline-block !important;
+  padding: 0.5rem 1.2rem !important;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  transition: all 0.3s !important;
+  font-weight: 500 !important;
+  align-self: flex-start !important;
+  margin-top: 1rem !important;
+  visibility: visible !important;
+}
+
+/* Mobile responsive override */
+@media screen and (max-width: 768px) {
+  .blog-list-improved {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+  }
+  
+  .blog-item-card {
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+  
+  .blog-item-image {
+    flex: 0 0 200px !important;
+    order: -1 !important;
+  }
+  
+  .blog-item-content {
+    order: 1 !important;
+  }
+}
+
+/* ==========================================================================
+   3. HOME PAGE STYLES
+   ========================================================================== */
+
+
+/* ===================================================================
+   2. ABOUT ME STYLES
+   ========================================================================== */
