@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'Miroslaw Steblik'
+title = 'Data Engineering Blog'
 
 
 [params]
