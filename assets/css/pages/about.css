@@ -1,0 +1,27 @@
+/* ==========================================================================
+   ABOUT PAGE STYLES
+   ========================================================================== */
+
+/* About page */
+.about-page-container {
+  padding: 2rem 0; /* Remove horizontal padding, let main handle it */
+  max-width: none; /* Remove width constraint, let main handle it */
+  margin: 0;
+}
+
+.about-container {
+  max-width: none; /* Remove width constraint, let main handle it */
+  margin: 0;
+}
+
+.about-content {
+  font-size: 1.1rem;
+}
+
+.about-content h2 {
+  color: var(--primary-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}

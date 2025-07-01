@@ -1,19 +1,12 @@
-{{- with resources.Get "css/main.css" }}
-  {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
-
-{{- with resources.Get "css/style.css" }}
-  {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{- /* Load CSS files in order */ -}}
+{{- range $file := slice "base/variables.css" "base/typography.css" "base/reset.css" "components/blog.css" "components/buttons.css" "components/navigation.css" "components/socials.css" "layout/footer.css" "layout/header.css" "layout/main.css" "responsive/desktop.css" "responsive/mobile.css" "pages/posts.css" "pages/home.css" "pages/about.css" }}
+  {{- with resources.Get (printf "css/%s" $file) }}
+    {{- if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
     {{- end }}
   {{- end }}
 {{- end }}

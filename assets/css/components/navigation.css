@@ -1,0 +1,181 @@
+/* ==========================================================================
+   TAGS COMPONENTS
+   ========================================================================== */
+
+/* Tags listing styles */
+.tags-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tag-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tag-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.tag-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tag-title a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.tag-title a:hover {
+  color: var(--primary-color);
+}
+
+.tag-count {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.tag-description {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.tag {
+  background-color: #2a3b47;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.tag:hover {
+  background-color: #1a365d;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tag-link {
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Social link styling for profile section */
+.social-link {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background-color: #2c5282;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-link:hover {
+  background-color: #1a365d;
+  transform: translateY(-2px);
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #003d99;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 500;
+  margin-top: auto; /* Push to bottom */
+  align-self: flex-start;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.read-more-btn:hover {
+  background-color: #003d99;
+  transform: translateY(-2px);
+}
+
+.main-navigation {
+  margin: 0;
+}
+
+.main-navigation nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  min-width: 80px;
+}
+
+.main-navigation nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.main-navigation nav a:hover::before {
+  left: 100%;
+}
+
+.main-navigation nav a:hover,
+.main-navigation nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}

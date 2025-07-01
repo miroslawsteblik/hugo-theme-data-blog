@@ -1,0 +1,33 @@
+/* ==========================================================================
+   MAIN LAYOUT
+   ========================================================================== */
+
+/* Main content container */
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section spacing */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}

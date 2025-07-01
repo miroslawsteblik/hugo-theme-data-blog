@@ -1,0 +1,64 @@
+/* Ensuring consistent background color everywhere =====================TODO*/
+.home-container, 
+.about-container, 
+.blog-container, 
+.post, 
+.about-page-container,
+.blog-description {
+  background-color: #f0f5f5 !important;
+}
+
+/* About page highlight styles */
+.company-highlight {
+  font-weight: 600;
+  color: var(--primary-color, #2563eb);
+  background: rgba(37, 99, 235, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  transition: all 0.2s ease;
+}
+
+.company-highlight:hover {
+  background: rgba(37, 99, 235, 0.15);
+  transform: translateY(-1px);
+}
+
+.tech-highlight {
+  font-weight: 600;
+  color: var(--secondary-color, #059669);
+  background: rgba(5, 150, 105, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  transition: all 0.2s ease;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.tech-highlight:hover {
+  background: rgba(5, 150, 105, 0.15);
+  transform: translateY(-1px);
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem 5rem; /* Use same padding as individual posts */
+  background-color: var(--background-color);
+  flex: 1 0 auto;
+}
+
+main:has(.blog-container),
+main:has(.post),
+main:has(.about-page-container),
+main:has(.post-page-container),
+main:has(.blog-page-container) {
+  padding: 0 3rem 5rem; 
+}
+
+
+.category-title {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
