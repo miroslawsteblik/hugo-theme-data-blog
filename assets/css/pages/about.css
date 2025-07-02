@@ -37,6 +37,12 @@
   font-size: 1.1rem;
 }
 
+.about-intro {
+
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
 .about-content h2 {
   color: var(--primary-color);
   margin-top: 2rem;
@@ -46,13 +52,16 @@
 }
 
 .company-highlight {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--primary-color, #2563eb);
   background: rgba(37, 99, 235, 0.1);
-  padding: 0.1rem 0.5rem;
+  padding: 0.rem 0.5rem;
   border-radius: 4px;
   border: 1px solid rgba(37, 99, 235, 0.2);
   transition: all 0.2s ease;
+  margin: 2px 0;
+  padding: 0.1rem 0.3rem;
+  font-size: 0.95rem;
 }
 
 .company-highlight:hover {
@@ -61,7 +70,7 @@
 }
 
 .tech-highlight {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--secondary-color, #059669);
   background: rgba(5, 150, 105, 0.1);
   padding: 0.1rem 0.5rem;
@@ -69,6 +78,9 @@
   border: 1px solid rgba(5, 150, 105, 0.2);
   transition: all 0.2s ease;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  margin: 2px 0;
+  padding: 0.1rem 0.3rem;
+  font-size: 0.95rem;
 }
 
 .tech-highlight:hover {

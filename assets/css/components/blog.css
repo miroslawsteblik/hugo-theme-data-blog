@@ -2,26 +2,10 @@
    BLOG COMPONENTS
    ========================================================================== */
 
-/* ==========================================================================
-   POST LAYOUT & CONTAINER
-   ========================================================================== */
-
-
-
-/* Blog listing page container - match about page styling */
-.blog-page-container {
-  padding: 2rem 0; /* Remove horizontal padding, let main handle it */
-  max-width: none; /* Remove width constraint, let main handle it */
-  margin: 0;
-}
-/* ==========================================================================
-   BLOG ITEM CARD
-   ========================================================================== */
-
 .blog-item-card {
   background-color: white !important;
   border-radius: 8px !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
   transition: transform 0.3s, box-shadow 0.3s !important;
   overflow: hidden !important;
   display: flex !important;
@@ -32,9 +16,8 @@
 
 .blog-item-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
-
 
 .blog-item-content {
   padding: 2rem !important;
@@ -44,9 +27,7 @@
   justify-content: center !important;
 }
 
-
 .blog-item-image img {
-
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -60,8 +41,6 @@
   max-height: 3.6em;
   overflow: hidden;
 }
-
-
 
 /* Force blog cards to display properly */
 .blog-list-improved {
@@ -104,13 +83,8 @@
   visibility: visible !important;
 }
 
-
 .blog-description {
   line-height: 1.6;
   margin-bottom: 2rem;
   color: var(--text-color);
 }
-
-
-
-

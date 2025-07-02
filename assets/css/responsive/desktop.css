@@ -33,13 +33,4 @@
     font-size: 2.5rem;
   }
   
-  /* Profile card enhancements */
-  .profile-card {
-    padding: 3rem;
-  }
-  
-  .profile-image {
-    width: 200px;
-    height: 200px;
-  }
 }

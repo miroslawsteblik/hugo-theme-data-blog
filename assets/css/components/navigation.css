@@ -1,7 +1,3 @@
-
-
-
-
 /* Social link styling for profile section */
 .social-link {
   display: inline-block;
@@ -17,8 +13,6 @@
   background-color: #1a365d;
   transform: translateY(-2px);
 }
-
-
 
 .main-navigation {
   margin: 0;
@@ -60,7 +54,12 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -114,7 +113,6 @@
   min-width: 0; /* Allow text to wrap if needed */
 }
 
-
 /* POST NAVIGATION - Move this entire section to components/navigation.css */
 .post-navigation {
   display: grid;
@@ -140,7 +138,7 @@
 
 .post-nav-card:hover {
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
   background-color: #444; /* Slightly lighter on hover */
 }
@@ -187,3 +185,4 @@
   line-height: 1.3;
   color: white;
 }
+

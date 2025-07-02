@@ -24,6 +24,8 @@
   margin: 2rem 0 3rem;
 }
 
+
+
 /* ==========================================================================
    PROFILE CARD COMPONENT
    ========================================================================== */
@@ -39,7 +41,7 @@
   grid-template-columns: 220px 1fr;
   gap: 2rem;
   width: 100%;
-  max-width: 700px;
+
   align-items: center;
   margin-bottom: 3rem;
   transition: all 0.3s ease;
@@ -50,10 +52,6 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.profile-content-full .profile-card {
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-}
 
 /* ==========================================================================
    PROFILE PHOTO & CAPTION
@@ -82,7 +80,7 @@
 
 .profile-caption p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: var(--text-color);
   word-wrap: break-word;

@@ -106,7 +106,6 @@
   line-height: var(--line-height-base);
   color: var(--text-color);
 
-  margin: 0 auto;
 }
 
 /* Typography within post content */
@@ -328,10 +327,6 @@
     font-size: 1.3rem;
   }
   
-  .post-content pre {
-    padding: var(--spacing-xs);
-    font-size: 0.85rem;
-  }
   
   .post-content table {
     font-size: 0.9rem;

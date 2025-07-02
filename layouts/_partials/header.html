@@ -1,12 +1,13 @@
 <div class="banner-container">
   <img src="{{ site.Params.bannerImage }}" alt="Banner Image" class="banner-image">
   <div class="header-content">
-    <div class="header-top">
-      <h1 class="site-title">{{ site.Title }}</h1>
-      <div class="header-top-right">
-        <div class="main-navigation">
-          {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-        </div>
+<div class="header-top">
+  <div class="site-branding">
+    <h1 class="site-title">{{ site.Title }}</h1>
+  </div>
+  <div class="main-navigation">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
         <div class="header-social">
           {{ if .Site.Params.social.github }}
             <a href="https://github.com/{{ .Site.Params.social.github }}" class="social-icon-link" target="_blank" rel="noopener">

@@ -201,3 +201,11 @@ description: "Your description here..."
 ### About Page Content
 **Before:** Hardcoded shortcodes
 **After:** Data-driven configuration in `data/about.yaml`
+
+## Data Pipeline Architecture
+
+Here's an interactive visualization of a typical data pipeline:
+
+{{< partial "data-pipeline-viz.html" >}}
+
+This visualization shows the three main stages of an ETL pipeline...

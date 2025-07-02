@@ -14,11 +14,12 @@
 @import "components/socials.css";
 @import "components/tags.css";
 @import "components/shortcodes.css";
+@import "components/code.css";
+@import "components/viz.css";
 
 @import "layout/footer.css";
 @import "layout/header.css";
 @import "layout/main.css";
-@import "layout/container.css";
 
 @import "responsive/desktop.css";
 @import "responsive/mobile.css";

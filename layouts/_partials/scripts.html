@@ -1,0 +1,8 @@
+{{ $copyCodeJS := resources.Get "js/copy-code.js" | resources.Minify }}
+<script src="{{ $copyCodeJS.RelPermalink }}"></script>
+
+<!-- D3.js for visualizations -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- Pipeline visualization script -->
+{{ $pipelineJS := resources.Get "js/pipeline-viz.js" | resources.Minify }}
+<script src="{{ $pipelineJS.RelPermalink }}"></script>
