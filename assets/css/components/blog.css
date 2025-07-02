@@ -6,12 +6,7 @@
    POST LAYOUT & CONTAINER
    ========================================================================== */
 
-.blog-container {
-  max-width: none; /* Remove width constraint, let main handle it */
-  margin: 0;
-  line-height: 1.6;
-  padding: 0; /* Remove padding, let main handle it */
-}
+
 
 /* Blog listing page container - match about page styling */
 .blog-page-container {

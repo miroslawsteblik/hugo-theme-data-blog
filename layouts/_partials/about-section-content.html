@@ -1,0 +1,4 @@
+{{ $content := .content }}
+{{ with $ }}
+  {{ ($.RenderString $content) | safeHTML }}
+{{ end }}

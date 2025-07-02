@@ -31,10 +31,7 @@
    ABOUT SHORTCODES
    ========================================================================== */
 
-.about-container {
-  max-width: none; /* Remove width constraint, let main handle it */
-  margin: 0;
-}
+
 
 .about-content {
   font-size: 1.1rem;
