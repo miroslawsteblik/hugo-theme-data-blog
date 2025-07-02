@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://yourdomain.com/'  # ← Update this
 languageCode = 'en-us'
-title = 'Data Engineering Blog'
+title = 'Blog'
 
 
 [params]
@@ -8,9 +8,9 @@ title = 'Data Engineering Blog'
   postsPerPage = 6 # Controls how many posts are displayed per page
 
 [params.social]
-  github = "yourusername"
-  linkedin = "yourusername"
-  email = "your.email@example.com"
+  github = "your-actual-username"      
+  linkedin = "your-actual-username"
+  email = "your.actual@email.com"
   
 [menus]
   [[menus.main]]
@@ -24,7 +24,7 @@ title = 'Data Engineering Blog'
     weight = 20
 
   [[menus.main]]
-    name = 'Data Engineering Blog'
+    name = 'Blog'
     url = '/posts/'
     weight = 30
 

@@ -57,3 +57,21 @@ blockquote {
   font-style: italic;
   color: var(--color-text-light);
 }
+
+.content-justified p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Don't justify short paragraphs - they look awkward */
+/* .content-justified p:has(< 60 characters) is not valid CSS and has been removed */
+.content-justified p[data-short="true"] {
+  text-align: left;
+}
+
+/* Mobile: no justification at all */
+@media (max-width: 768px) {
+  .content-justified p {
+    text-align: left !important;
+  }
+}
