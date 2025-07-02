@@ -7,6 +7,14 @@ title = 'Blog'
   bannerImage = '/images/banner_pipeline.jpeg'
   postsPerPage = 6 # Controls how many posts are displayed per page
 
+  # Enable/disable features
+  enableHighlights = true
+  enableContentSections = true
+  enableReadingTime = true
+  enableTagFiltering = true
+  
+ 
+
 [params.social]
   github = "your-actual-username"      
   linkedin = "your-actual-username"

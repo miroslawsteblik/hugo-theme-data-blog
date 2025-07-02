@@ -18,6 +18,7 @@
 @import "layout/footer.css";
 @import "layout/header.css";
 @import "layout/main.css";
+@import "layout/container.css";
 
 @import "responsive/desktop.css";
 @import "responsive/mobile.css";

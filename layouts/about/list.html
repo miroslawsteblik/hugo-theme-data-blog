@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="about-page">
+
+  <div class="container">
+    {{ if .Site.Data.about.sections }}
+      <div class="about-sections">
+        {{ range .Site.Data.about.sections }}
+          <section class="content-section">
+            <h2 class="section-title">{{ .title }}</h2>
+            <div class="section-content content-justified">
+              {{ $.RenderString .content }}
+            </div>
+          </section>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

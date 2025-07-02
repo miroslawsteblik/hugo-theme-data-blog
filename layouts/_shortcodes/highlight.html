@@ -1,0 +1,10 @@
+{{ $type := .Get "type" | default "default" }}
+{{ $class := "" }}
+{{ if eq $type "company" }}
+    {{ $class = "company-highlight" }}
+{{ else if eq $type "tech" }}
+    {{ $class = "tech-highlight" }}
+{{ else }}
+    {{ $class = printf "highlight highlight-%s" $type }}
+{{ end }}
+<span class="{{ $class }}">{{ .Inner }}</span>
