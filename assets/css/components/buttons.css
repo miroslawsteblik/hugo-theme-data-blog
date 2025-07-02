@@ -2,34 +2,26 @@
    BUTTON COMPONENTS
    ========================================================================== */
 
-/* Base button styles */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  cursor: pointer;
+
+
+
+   
+.read-more-btn {
+    display: inline-block !important;
+    padding: 0.5rem 1.2rem !important;
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    transition: all 0.3s !important;
+    font-weight: 500 !important;
+    align-self: flex-start !important;
+    margin-top: 1rem !important;
+    visibility: visible !important;
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
-  color: white;
-}
 
-.btn-primary:hover {
-  background-color: var(--primary-hover-color, #0041a3);
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.btn-secondary:hover {
-  background-color: var(--secondary-hover-color, #555);
-  transform: translateY(-2px);
+.read-more-btn:hover {
+    background-color: #003d99;
+    transform: translateY(-2px);
 }

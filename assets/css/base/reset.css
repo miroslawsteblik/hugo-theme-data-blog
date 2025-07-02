@@ -1,64 +1,102 @@
-/* Ensuring consistent background color everywhere =====================TODO*/
-.home-container, 
-.about-container, 
-.blog-container, 
-.post, 
-.about-page-container,
-.blog-description {
-  background-color: #f0f5f5 !important;
+
+/* ==========================================================================
+   CSS RESET & NORMALIZE
+   ========================================================================== */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* About page highlight styles */
-.company-highlight {
-  font-weight: 600;
-  color: var(--primary-color, #2563eb);
-  background: rgba(37, 99, 235, 0.1);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  border: 1px solid rgba(37, 99, 235, 0.2);
-  transition: all 0.2s ease;
+/* Remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.company-highlight:hover {
-  background: rgba(37, 99, 235, 0.15);
-  transform: translateY(-1px);
+/* HTML and body setup */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-.tech-highlight {
-  font-weight: 600;
-  color: var(--secondary-color, #059669);
-  background: rgba(5, 150, 105, 0.1);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  border: 1px solid rgba(5, 150, 105, 0.2);
-  transition: all 0.2s ease;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-}
-
-.tech-highlight:hover {
-  background: rgba(5, 150, 105, 0.15);
-  transform: translateY(-1px);
-}
-
-main {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 3rem 5rem; /* Use same padding as individual posts */
+body {
+  line-height: 1.6;
+  font-family: var(--font-family-base);
+  color: var(--text-color);
   background-color: var(--background-color);
-  flex: 1 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-main:has(.blog-container),
-main:has(.post),
-main:has(.about-page-container),
-main:has(.post-page-container),
-main:has(.blog-page-container) {
-  padding: 0 3rem 5rem; 
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
 }
 
-
-.category-title {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: var(--primary-color);
+/* Reset form elements */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
 }
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset fieldset and legend */
+fieldset {
+  border: none;
+}
+
+legend {
+  padding: 0;
+}
+
+/* Remove default focus outline (add custom focus styles elsewhere) */
+:focus {
+  outline: none;
+}
+
+/* Ensure consistent line-height for all elements */
+*,
+*::before,
+*::after {
+  line-height: inherit;
+}
+

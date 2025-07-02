@@ -5,7 +5,6 @@ title = 'Data Engineering Blog'
 
 [params]
   bannerImage = '/images/banner_pipeline.jpeg'
-  mainSections = ["posts"]
   postsPerPage = 6 # Controls how many posts are displayed per page
 
 [params.social]

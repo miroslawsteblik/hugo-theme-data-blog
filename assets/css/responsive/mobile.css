@@ -25,7 +25,7 @@
   }
 }
 
-/* Small screens: Mobile (up to 768px) ============== issue here, was not closed*/
+/* Small screens: Mobile (up to 768px) */
 @media screen and (max-width: 768px) {
   /* Layout adjustments */
   .header-content {

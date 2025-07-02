@@ -1,5 +1,22 @@
 {{- /* Load CSS files in order */ -}}
-{{- range $file := slice "base/variables.css" "base/typography.css" "base/reset.css" "components/blog.css" "components/buttons.css" "components/navigation.css" "components/socials.css" "layout/footer.css" "layout/header.css" "layout/main.css" "responsive/desktop.css" "responsive/mobile.css" "pages/posts.css" "pages/home.css" "pages/about.css" }}
+{{- range $file := slice 
+  "base/reset.css"
+  "base/variables.css" 
+  "base/typography.css"
+  "layout/main.css"
+  "layout/header.css" 
+  "layout/footer.css"
+  "components/buttons.css"
+  "components/navigation.css"
+  "components/socials.css"
+  "components/tags.css"
+  "components/blog.css"
+  "pages/home.css"
+  "pages/about.css"
+  "pages/posts.css"
+  "responsive/desktop.css"
+  "responsive/mobile.css"
+}}
   {{- with resources.Get (printf "css/%s" $file) }}
     {{- if hugo.IsDevelopment }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">

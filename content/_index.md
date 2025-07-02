@@ -3,7 +3,7 @@ title: "Home"
 featured_image: '/images/banner_pipeline.jpeg'
 ---
 
-## Data Engineering & Infrastructure
+# Data Engineering & Infrastructure
 
 {{< profile-card image="/images/miroslaw_head.jpeg" alt="Professional headshot of Miroslaw Steblik" >}}
 Hello! I'm Miroslaw Steblik, a data engineer with 7 years of experience in designing and implementing data infrastructure, ETL pipelines, and analytics solutions.
@@ -47,5 +47,5 @@ Hello! I'm Miroslaw Steblik, a data engineer with 7 years of experience in desig
 
 {{< /expertise-section >}}
 
-### Get in touch
+## Get in touch
 Working on something interesting in data? I'd love to hear from you!
