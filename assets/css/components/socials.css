@@ -5,6 +5,7 @@
 .header-social, .footer-social {
   display: flex;
   gap: 1.5rem;
+  flex: 0 0 auto;
 }
 
 .social-icon-link {

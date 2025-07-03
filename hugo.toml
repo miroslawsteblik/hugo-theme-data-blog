@@ -1,6 +1,6 @@
 baseURL = 'https://yourdomain.com/'  # ← Update this
 languageCode = 'en-us'
-title = 'Blog'
+title = 'Miroslaw Steblik'
 
 
 [params]

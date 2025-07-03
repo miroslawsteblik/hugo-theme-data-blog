@@ -6,3 +6,7 @@
 <!-- Pipeline visualization script -->
 {{ $pipelineJS := resources.Get "js/pipeline-viz.js" | resources.Minify }}
 <script src="{{ $pipelineJS.RelPermalink }}"></script>
+
+<!-- Custom scripts -->
+{{ $headerJS := resources.Get "js/header.js" | resources.Minify }}
+<script src="{{ $headerJS.RelPermalink }}"></script>
