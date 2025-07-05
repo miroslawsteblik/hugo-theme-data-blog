@@ -378,7 +378,11 @@ footer {
     position: absolute;
     top: 100%; /* Position right below header */
     left: 0;
-    width: 50%; /* Take up only part of the screen width */
+    width: 70%; /* Take up only part of the screen width */
+    height: 100vh; /* Adjust height to fit content */
+    bottom: 0; /* Ensure it stretches to the bottom */
+
+    flex-direction: column;
     background-color: var(--secondary-color);
     padding: 1rem 1.5rem;
     z-index: 999;
